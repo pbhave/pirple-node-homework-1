@@ -38,10 +38,10 @@ var server = http.createServer((req, res) => {
         var chosenHandler = router[trimmedPath] ? router[trimmedPath]: handlers.notFound;
 
         var data = {
-            'trimmedPath': trimmedPath,
-            'queryStringObject': queryStringObject,
-            'method': method,
-            'headers': headers,
+            trimmedPath,
+            queryStringObject,
+            method,
+            headers,
             'payload': buffer
         };
 
